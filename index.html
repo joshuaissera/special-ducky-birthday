@@ -9,7 +9,13 @@
 body{
     margin:0;
     font-family:'Quicksand',sans-serif;
-    background:linear-gradient(180deg,#fff8dc,#ffeef8);
+    background:linear-gradient(
+180deg,
+#fff8dc,
+#fff4b8,
+#ffe9f3,
+#fff8dc
+);
     color:#444;
     overflow-x:hidden;
 }
@@ -24,12 +30,13 @@ body{
 }
 h1{font-size:3rem;margin-bottom:10px;}
 .card{
-    background:white;
+    background:rgba(255,255,255,.95);
     max-width:900px;
-    margin:30px auto;
-    padding:30px;
-    border-radius:25px;
-    box-shadow:0 8px 25px rgba(0,0,0,.1);
+    margin:40px auto;
+    padding:35px;
+    border-radius:30px;
+    box-shadow:0 15px 35px rgba(0,0,0,.08);
+    backdrop-filter:blur(10px);
 }
 .btn{
     background:#ffd54f;
@@ -46,9 +53,16 @@ h1{font-size:3rem;margin-bottom:10px;}
 }
 .gallery img{
     width:100%;
-    border-radius:18px;
+    background:white;
+    padding:12px;
+    border-radius:12px;
     transform:rotate(-2deg);
-    box-shadow:0 5px 15px rgba(0,0,0,.15);
+    box-shadow:0 10px 25px rgba(0,0,0,.15);
+    transition:all .3s ease;
+}
+
+.gallery img:hover{
+    transform:rotate(0deg) scale(1.05);
 }
 .letter{
     line-height:1.9;
