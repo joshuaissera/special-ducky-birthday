@@ -110,14 +110,8 @@ h1{font-size:3rem;margin-bottom:10px;}
 
 <section class="hero">
 <h1>🐻‍❄️ To The Ducky I Found 🐥</h1>
-<p>There are thousands of people in this world.
-
-Somehow, through a game,
-through late-night conversations,
-through countless little moments...
-
-I found you. 🐥💛</p>
-<button class="btn" onclick="document.getElementById('story').scrollIntoView({behavior:'smooth'})">Open Letter 💌</button>
+<p id="typewriter"></p>
+<button class="btn" onclick="document.getElementById('story').scrollIntoView({behavior:'smooth'})">Read My Letter To You 💌</button>
 </section>
 
 <div id="story" class="card fade-in">
@@ -235,6 +229,22 @@ const observer = new IntersectionObserver(entries => {
 document.querySelectorAll('.fade-in').forEach(el => {
     observer.observe(el);
 });
+</script>
+<script>
+const text =
+"There are thousands of people in this world. Somehow, through a game, through late-night conversations, through countless little moments... I found you. 🐥💛";
+
+let i = 0;
+
+function typeWriter() {
+    if (i < text.length) {
+        document.getElementById("typewriter").innerHTML += text.charAt(i);
+        i++;
+        setTimeout(typeWriter, 35);
+    }
+}
+
+window.addEventListener("load", typeWriter);
 </script>
 </body>
 </html>
