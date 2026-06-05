@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Birthday My Special Ducky 🐥</title>
+<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+body{
+    margin:0;
+    font-family:'Quicksand',sans-serif;
+    background:linear-gradient(180deg,#fff8dc,#ffeef8);
+    color:#444;
+    overflow-x:hidden;
+}
+.hero{
+    min-height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:20px;
+}
+h1{font-size:3rem;margin-bottom:10px;}
+.card{
+    background:white;
+    max-width:900px;
+    margin:30px auto;
+    padding:30px;
+    border-radius:25px;
+    box-shadow:0 8px 25px rgba(0,0,0,.1);
+}
+.btn{
+    background:#ffd54f;
+    border:none;
+    padding:15px 25px;
+    border-radius:999px;
+    cursor:pointer;
+    font-size:1rem;
+}
+.gallery{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:20px;
+}
+.gallery img{
+    width:100%;
+    border-radius:18px;
+    transform:rotate(-2deg);
+    box-shadow:0 5px 15px rgba(0,0,0,.15);
+}
+.letter{
+    line-height:1.9;
+    font-size:1.1rem;
+}
+.floating{
+    position:fixed;
+    font-size:2rem;
+    animation:float 12s linear infinite;
+    opacity:.6;
+}
+@keyframes float{
+    from{transform:translateY(110vh)}
+    to{transform:translateY(-120px)}
+}
+.final{
+    text-align:center;
+    padding:80px 20px;
+}
+.hidden{display:none;}
+</style>
+</head>
+<body>
+
+<div class="floating" style="left:10%">🐥</div>
+<div class="floating" style="left:30%;animation-delay:3s">🐻</div>
+<div class="floating" style="left:55%;animation-delay:6s">❤️</div>
+<div class="floating" style="left:80%;animation-delay:2s">✨</div>
+
+<section class="hero">
+<h1>🐻 A Polar Bear Has A Message For A Ducky 🐥</h1>
+<p>Happy Birthday My Special Ducky 💛</p>
+<button class="btn" onclick="document.getElementById('story').scrollIntoView({behavior:'smooth'})">Open Letter 💌</button>
+</section>
+
+<div id="story" class="card">
+<h2>Once Upon A Time...</h2>
+<p>
+A year ago, a Polar Bear met a Ducky.
+And somehow, one year later, she's still the most amazing person he knows.
+</p>
+</div>
+
+<div class="card">
+<h2>📸 Our Little Scrapbook</h2>
+<div class="gallery">
+<img src="photo1.jpg">
+<img src="photo2.jpg">
+<img src="photo3.jpg">
+</div>
+</div>
+
+<div class="card">
+<h2>🐑 About "Sheep"</h2>
+<p>
+Ever since we started dating, we've always said "sheep".
+To everyone else it's just a random word, but to me it's something much more.
+It reminds me of the fondest nights, the coziest conversations, and the feeling of being completely at peace with you.
+Somehow that tiny word became a little home that only we understand.
+</p>
+</div>
+
+<div class="card letter">
+<h2>💌 To My Special Ducky</h2>
+<p>
+Happy Birthday, Chi.
+<br><br>
+Thank you for your kindness, your silliness, and for being the amazing person that you are.
+You've brought so much warmth into my life over this past year.
+<br><br>
+One of my favorite memories will always be how we first confessed in Valorant.
+Who would've thought a game would lead me to someone so special?
+<br><br>
+I'll never forget how you were the first person who truly celebrated my birthday properly with me.
+That meant more than I can ever put into words.
+<br><br>
+And every time I see the night light you made from the flowers I gave you, I smile.
+You turned a gift into a memory that keeps shining.
+<br><br>
+There are so many reasons I love you, but my favorite is simply being able to share life with you.
+<br><br>
+I hope this birthday brings you happiness, peace, success, and countless reasons to smile.
+You deserve every good thing coming your way.
+<br><br>
+Happy Birthday, My Special Ducky 🐥💛
+<br><br>
+Love,<br>
+Joshyboo 🐻
+</p>
+</div>
+
+<section class="final">
+<h1>🎂 HAPPY BIRTHDAY MY SPECIAL DUCKY 🐥</h1>
+<p>One year down, many more memories to go. ❤️</p>
+</section>
+
+</body>
+</html>
