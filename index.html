@@ -110,6 +110,28 @@ h1{font-size:3rem;margin-bottom:10px;}
     width:100%;
     margin-top:10px;
 }
+    .gallery p{
+    text-align:center;
+    margin-top:10px;
+    font-size:0.95rem;
+}
+    .celebrate{
+    position:fixed;
+    top:-50px;
+    font-size:2rem;
+    animation:fall 5s linear forwards;
+    pointer-events:none;
+    z-index:9999;
+}
+
+@keyframes fall{
+    from{
+        transform:translateY(-50px) rotate(0deg);
+    }
+    to{
+        transform:translateY(110vh) rotate(360deg);
+    }
+}
 </style>
 </head>
 <body>
@@ -163,9 +185,22 @@ And somehow, one year later, she's still the most amazing person he knows.
 <h2>📸 Our Little Scrapbook</h2>
     <p><i>The cutest ducky in the world according to one very biased polar bear. 🐻‍❄️💛</i></p>
 <div class="gallery">
-<img src="photo1.jpg">
-<img src="photo2.jpg">
-<img src="photo3.jpg">
+
+    <div>
+        <img src="photo1.jpg" alt="">
+        <p><i>🐥 The cutest birthday ducky</i></p>
+    </div>
+
+    <div>
+        <img src="photo2.jpg" alt="">
+        <p><i>🌙 A cozy night accompanied by a cutie</i></p>
+    </div>
+
+    <div>
+        <img src="photo3.jpg" alt="">
+        <p><i>💛 A smile that still makes my day better</i></p>
+    </div>
+
 </div>
 </div>
 
@@ -235,7 +270,7 @@ Joshyboo 🐻‍❄️
 </p>
 </div>
 
-<section class="final fade-in">
+<section class="final fade-in" id="birthday-finale">
 <h1>🎂 HAPPY BIRTHDAY MY SPECIAL DUCKY 🐥</h1>
 <p>
 Of all the places life could have taken me,
@@ -279,6 +314,54 @@ function typeWriter() {
 }
 
 window.addEventListener("load", typeWriter);
+</script>
+    <script>
+let celebrationPlayed = false;
+
+function launchCelebration(){
+
+    if(celebrationPlayed) return;
+
+    celebrationPlayed = true;
+
+    const emojis = ['🐥','🐻‍❄️','💛','❤️','✨'];
+
+    for(let i=0;i<40;i++){
+
+        const item = document.createElement('div');
+
+        item.className = 'celebrate';
+
+        item.innerHTML =
+            emojis[Math.floor(Math.random()*emojis.length)];
+
+        item.style.left = Math.random()*100 + 'vw';
+
+        item.style.animationDuration =
+            (3 + Math.random()*3) + 's';
+
+        document.body.appendChild(item);
+
+        setTimeout(() => item.remove(),6000);
+    }
+}
+
+const finaleObserver =
+new IntersectionObserver(entries => {
+
+    entries.forEach(entry => {
+
+        if(entry.isIntersecting){
+            launchCelebration();
+        }
+
+    });
+
+});
+
+finaleObserver.observe(
+    document.getElementById('birthday-finale')
+);
 </script>
 </body>
 </html>
